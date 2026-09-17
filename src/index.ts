@@ -1,10 +1,7 @@
 export {
-  ShortcutsContext,
-  ShortcutsContextProvider,
+  ShortcutsManager,
   type ShortcutListener,
-  type ShortcutsContextProps,
-} from './contexts/shortcuts.context';
-export { useShortcut } from './hooks/use-shortcut';
+} from './core/shortcuts-manager';
 export {
   default as KEYBINDS,
   SHORTCUTS,

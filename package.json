@@ -1,15 +1,20 @@
 {
-  "name": "react-global-shortcuts",
+  "name": "browser-shortcuts",
   "version": "0.1.0",
-  "description": "React context, hook and config for declarative keyboard, mouse and wheel shortcuts.",
+  "description": "Declarative keyboard, mouse and wheel shortcuts for React, Preact, Vue, Svelte, Solid and Angular.",
   "license": "MIT",
   "author": "Antonio Okoro",
   "keywords": [
-    "react",
     "shortcuts",
     "keybindings",
     "hotkeys",
-    "keyboard"
+    "keyboard",
+    "react",
+    "preact",
+    "vue",
+    "svelte",
+    "solid",
+    "angular"
   ],
   "sideEffects": false,
   "type": "module",
@@ -22,6 +27,36 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./preact": {
+      "types": "./dist/preact.d.ts",
+      "import": "./dist/preact.js",
+      "require": "./dist/preact.cjs"
+    },
+    "./vue": {
+      "types": "./dist/vue.d.ts",
+      "import": "./dist/vue.js",
+      "require": "./dist/vue.cjs"
+    },
+    "./svelte": {
+      "types": "./dist/svelte.d.ts",
+      "import": "./dist/svelte.js",
+      "require": "./dist/svelte.cjs"
+    },
+    "./solid": {
+      "types": "./dist/solid.d.ts",
+      "import": "./dist/solid.js",
+      "require": "./dist/solid.cjs"
+    },
+    "./angular": {
+      "types": "./dist/angular.d.ts",
+      "import": "./dist/angular.js",
+      "require": "./dist/angular.cjs"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -33,18 +68,61 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "preact": "^10.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "solid-js": "^1.8.0",
+    "svelte": "^4.0.0 || ^5.0.0",
+    "vue": "^3.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": {
+      "optional": true
+    },
+    "preact": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@angular/compiler": "^19.2.25",
+    "@angular/core": "^19.0.0",
+    "@angular/platform-browser": "^19.2.25",
+    "@angular/platform-browser-dynamic": "^19.2.25",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vue/test-utils": "^2.5.1",
+    "jsdom": "^29.1.1",
+    "preact": "^10.24.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "solid-js": "^1.9.3",
+    "svelte": "^5.0.0",
     "tsup": "^8.5.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.1",
+    "vue": "^3.5.0",
+    "zone.js": "^0.15.1"
   }
 }

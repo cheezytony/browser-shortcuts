@@ -1,5 +1,3 @@
-'use client';
-
 /**
  * Maps a keybind string (e.g. `"CTRL+SHIFT+F"`) to either the name of a
  * {@link SHORTCUTS} entry or an inline handler.

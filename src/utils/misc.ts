@@ -1,9 +1,9 @@
-'use client';
-
 import type { Keybind } from '@/config';
 
 /** Whether the current platform reports itself as macOS (used to prefer `CMD` over `CTRL`). */
-export const IS_MAC = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+export const IS_MAC =
+  typeof navigator !== 'undefined' &&
+  navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 
 /** Whether the current device supports mouse/keyboard input rather than touch only. */
 export const IS_NOT_TOUCH_DEVICE = (() => {
