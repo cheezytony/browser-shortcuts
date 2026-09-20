@@ -16,6 +16,10 @@
     "solid",
     "angular"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheezytony/browser-shortcuts.git"
+  },
   "sideEffects": false,
   "type": "module",
   "main": "./dist/index.cjs",
