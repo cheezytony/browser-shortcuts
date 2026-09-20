@@ -1,13 +1,11 @@
 /** @jsxImportSource preact */
 import type { Keybind } from '@/config';
-import { ShortcutsManager, type ShortcutListener } from '@/core/shortcuts-manager';
-import { createContext, type ComponentChildren } from 'preact';
 import {
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from 'preact/hooks';
+  ShortcutsManager,
+  type ShortcutListener,
+} from '@/core/shortcuts-manager';
+import { createContext, type ComponentChildren } from 'preact';
+import { useContext, useEffect, useLayoutEffect, useState } from 'preact/hooks';
 
 export type { ShortcutListener } from '@/core/shortcuts-manager';
 

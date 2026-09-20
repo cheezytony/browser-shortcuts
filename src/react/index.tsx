@@ -1,7 +1,10 @@
 'use client';
 
 import type { Keybind } from '@/config';
-import { ShortcutsManager, type ShortcutListener } from '@/core/shortcuts-manager';
+import {
+  ShortcutsManager,
+  type ShortcutListener,
+} from '@/core/shortcuts-manager';
 import {
   createContext,
   useContext,
